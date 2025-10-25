@@ -1,3 +1,5 @@
+using BlogCore.AccessData.Data.Repository;
+using BlogCore.AccessData.Data.Repository.IRepository;
 using BlogCore.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +16,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IJobsContainer, JobsContainer>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
