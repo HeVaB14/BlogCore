@@ -78,6 +78,7 @@ namespace BlogCore.AccessData.Data.Repository
             // Devolver la primera entidad que cumple con el filtro, o null si no hay coincidencias
             return query.FirstOrDefault();
 
+
         }
 
         // Método para eliminar una entidad por su ID
